@@ -107,3 +107,46 @@ The application requires the document root to be set to the `web` directory.
 ## Configuring Server
 
 - Nginx - [development config](./docker/nginx/conf.d/dev.conf)
+
+
+---------- UPDATE DOCKER  21/08/2017------------------
+
+1.0 $ docker-compose ps
+        Name                       Command               State           Ports          
+    ---------------------------------------------------------------------------------------
+    bootstrapyii2_mysql_1   docker-entrypoint.sh mysqld      Up      0.0.0.0:3306->3306/tcp 
+    bootstrapyii2_nginx_1   nginx -g daemon off;             Up      0.0.0.0:80->80/tcp     
+    bootstrapyii2_php_1     docker-php-entrypoint php- ...   Up      9000/tcp               
+    GSTEARMITs-MacBook-Air:bootstrap-yii2 gstearmit$ 
+    
+2.0 SQLSTATE[HY000] [2002] No such file or directory / Connection refused 
+   https://github.com/dmstr/docker-yii2-app/issues/4
+   EDIT: this is the solution
+   
+   In your config file docker-composer.yml
+   
+     mysql:
+       image: 'mysql:latest'
+       volumes:
+           - ./docker/dbdata:/var/lib/mysql
+       ports:
+           - '3306:3306'
+       restart: always
+       environment:
+          MYSQL_ROOT_PASSWORD: pass
+          MYSQL_DATABASE: database
+   In your project db.php
+   
+   return [
+       'class' => 'yii\db\Connection',
+       'dsn' => 'mysql:host=mysql;dbname=database',
+       'username' => 'root',
+       'password' => 'pass',
+       'charset' => 'utf8',
+   ];
+   
+3.0
+    $ docker-compose up -d
+    $ docker ps -a
+    $ docker exec -it ace41426dfe3 /bin/bash
+     # composer update
