@@ -12,17 +12,16 @@ use yii\helpers\Url;
 
 <?php $this->title = Yii::t('app', 'Index'); ?>
 <div class="page-header">
-  <h1>Bootstrap for Yii2</h1>
+  <h1>WESHOP FRONT-END v3 for Yii2 @08/2017</h1>
 </div>
 
-<p class="lead">Features</p>
+<p class="lead">Features Funtion</p>
 <ul>
   <li>Users, Roles, Registration, Basic and social authorization</li>
   <li>Settings</li>
-  <li><a href="https://github.com/rkit/filemanager-yii2">File Manager</a></li>
-  <li><a href="https://webpack.github.io/">Webpack for assets</a></li>
+  <!li> File Manager</li>
+  <li>Webpack for assets</li>
 </ul>
 
 <hr>
-<a href="https://github.com/rkit/bootstrap-yii2" class="btn btn-info">GitHub</a>
 <?= Html::a(Yii::t('app', 'Control Panel'), ['/admin'], ['class' => 'btn btn-default']) ?>

@@ -11,7 +11,7 @@ use yii\bootstrap\NavBar;
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= Html::encode($this->title . ' / ' . Yii::$app->name) ?></title>
+  <title>Hoang PHuc <?= Html::encode($this->title . ' / ' . Yii::$app->name) ?></title>
   <?= Html::csrfMetaTags()?>
   <?php $this->head() ?>
   <?= Html::cssFile('/assets/' . ArrayHelper::getValue(Yii::$app->params['assets'], 'front.css')) ?>

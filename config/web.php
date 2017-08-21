@@ -16,7 +16,7 @@ $config = [
     'defaultRoute'   => 'index/index',
     'sourceLanguage' => 'en',
     'language'       => 'en',
-    'timeZone'       => 'Europe/Moscow',
+    'timeZone'       => 'Asia/Ho_Chi_Minh',
 
     'aliases' => [
         '@bower' => '@vendor/bower-asset',

@@ -1,16 +1,3 @@
-# Bootstrap for Yii2
-
-[![Build Status](https://travis-ci.org/rkit/bootstrap-yii2.svg?branch=master)](https://travis-ci.org/rkit/bootstrap-yii2)
-[![Code Coverage](https://scrutinizer-ci.com/g/rkit/bootstrap-yii2/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/rkit/bootstrap-yii2/?branch=master)
-[![codecov.io](http://codecov.io/github/rkit/bootstrap-yii2/coverage.svg?branch=master)](http://codecov.io/github/rkit/bootstrap-yii2?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rkit/bootstrap-yii2/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rkit/bootstrap-yii2/?branch=master)
-
-## Features
-
-- Users, Roles, Registration, Basic and social authorization
-- [Settings](https://github.com/rkit/settings-yii2)
-- [File Manager](https://github.com/rkit/filemanager-yii2)
-- [Webpack for assets](https://webpack.github.io/)
 
 
 ## Soft
@@ -109,7 +96,7 @@ The application requires the document root to be set to the `web` directory.
 - Nginx - [development config](./docker/nginx/conf.d/dev.conf)
 
 
----------- UPDATE DOCKER  21/08/2017------------------
+---------- UPDATE DOCKER  21/08/2017 FIXED------------------
 
 1.0 $ docker-compose ps
         Name                       Command               State           Ports          
@@ -174,3 +161,5 @@ The application requires the document root to be set to the `web` directory.
           Reconfigure modules of codeception  $ composer test:reconfig
           Run tests with coverage  $ composer test:coverage
           Show coverage dashboard  $ composer test:stats
+6.0 File Manager Upload
+ <li><a href="https://github.com/rkit/filemanager-yii2">File Manager</a></li>
