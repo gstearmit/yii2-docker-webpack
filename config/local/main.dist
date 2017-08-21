@@ -10,12 +10,14 @@ $isAllow = YII_ENV_MODE === 'web' && in_array($_SERVER['REMOTE_ADDR'], $allowedI
 
 $config['components']['db'] = [
     'class'                 => 'yii\db\Connection',
-    'dsn'                   => 'mysql:host=localhost;dbname=bootstrap_yii2',
-    'username'              => 'bootstrap_yii2',
-    'password'              => '',
+    'dsn'                   => 'mysql:host=mysql;dbname=weshop_frontend_v3',
+    'username'              => 'root',
+    'password'              => 'root',
     'emulatePrepare'        => true,
     'charset'               => 'utf8',
-    'enableSchemaCache'     => YII_ENV_DEV ? false : true
+    'enableSchemaCache'     => YII_ENV_DEV ? false : true,
+    'schemaCacheDuration' => 7200,
+    'schemaCache' => 'cache'
 ];
 
 /**
